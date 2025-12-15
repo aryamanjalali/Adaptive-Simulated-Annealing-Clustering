@@ -353,18 +353,26 @@ def run_clustering_comparison(data, k, title_suffix, filename=None, max_iter_sa=
     plt.show()
     
     # --- PLOT 2: Side-by-Side Clusters (Only for 2D data) ---
+    # --- PLOT 2: Separate Clusters (Only for 2D data) ---
     if data.shape[1] == 2:
-        fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-        axes[0].scatter(data[:, 0], data[:, 1], c=kmeans_labels, cmap='viridis', s=50, edgecolor='k')
-        axes[0].set_title(f"KMeans (1 Init) Result (Distortion: {kmeans_dist:.2f})")
-        axes[0].grid(True, alpha=0.3)
-        axes[1].scatter(data[:, 0], data[:, 1], c=sa_labels, cmap='viridis', s=50, edgecolor='k')
-        axes[1].set_title(f"SA+Polish Result (Distortion: {sa_dist:.2f})")
-        axes[1].grid(True, alpha=0.3)
-        plt.suptitle(f"Clustering Comparison: {title_suffix}", fontsize=16)
+        # Plot 2.1: KMeans
+        plt.figure(figsize=(7, 6))
+        plt.scatter(data[:, 0], data[:, 1], c=kmeans_labels, cmap='viridis', s=50, edgecolor='k')
+        plt.title(f"KMeans (1 Init) Result (Distortion: {kmeans_dist:.2f})")
+        plt.grid(True, alpha=0.3)
         plt.tight_layout()
         if filename:
-            plt.savefig(f'SS/{filename}_clustering.jpg', dpi=150, bbox_inches='tight')
+            plt.savefig(f'SS/{filename}_clustering_kmeans.jpg', dpi=150, bbox_inches='tight')
+        plt.show()
+        
+        # Plot 2.2: SA
+        plt.figure(figsize=(7, 6))
+        plt.scatter(data[:, 0], data[:, 1], c=sa_labels, cmap='viridis', s=50, edgecolor='k')
+        plt.title(f"SA+Polish Result (Distortion: {sa_dist:.2f})")
+        plt.grid(True, alpha=0.3)
+        plt.tight_layout()
+        if filename:
+            plt.savefig(f'SS/{filename}_clustering_sa.jpg', dpi=150, bbox_inches='tight')
         plt.show()
 
     print(f"--- {title_suffix} ---")
