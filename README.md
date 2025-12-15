@@ -2,7 +2,7 @@
 
 A robust, publication-ready implementation of **Simulated Annealing (SA)** for clustering and optimization tasks, featuring adaptive temperature calibration and a hybrid "polishing" mechanism.
 
-## 📌 Project Overview
+##  Project Overview
 
 This repository contains the code for the paper *"Adaptive Simulated Annealing with Polishing for Clustering: A Comprehensive Multi-Dataset Analysis"*. It demonstrates how Simulated Annealing can overcome local optima in complex optimization landscapes where traditional methods like K-means often fail.
 
@@ -12,7 +12,7 @@ This repository contains the code for the paper *"Adaptive Simulated Annealing w
 *   **Uphill Exploration**: Probabilistic acceptance of worse solutions allows the algorithm to escape local optima.
 *   **Multi-Dataset Benchmarking**: Validated on 14+ datasets including UCI Real-world data (Iris, Wine, Breast Cancer, Glass) and complex synthetic benchmarks (Grid, Chaotic, Blobs).
 
-## 📂 Files
+##  Files
 
 *   **`Simulated_Annealing_Publication.ipynb`**: The main Jupyter Notebook containing:
     *   Full algorithm implementation (SA + Polishing).
@@ -21,7 +21,7 @@ This repository contains the code for the paper *"Adaptive Simulated Annealing w
     *   Visualization code for convergence plots and 2D cluster maps.
 *   **`simulated_annealing_publication_code.py`**: A Python script version of the notebook for command-line execution or import.
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 *   Python 3.8+
@@ -47,12 +47,12 @@ Or run the script directly:
 python3 simulated_annealing_publication_code.py
 ```
 
-## 📊 Results Summary
+##  Results Summary
 
 The Adaptive SA+Polishing algorithm consistently matches or outperforms standard K-means, with dramatic improvements on complex geometries:
 *   **Grid Dataset**: **87.6% improvement** in distortion (Correctly finds $4\times4$ grid structure).
 *   **1D Motivating Example**: **15.7% improvement** (Escapes local trap).
 *   **Detailed Exploration**: The code includes specific visualizations showing the "Uphill Moves" mechanism.
 
-## 📜 License
+##  License
 This project is open source and available under the [MIT License](LICENSE).
