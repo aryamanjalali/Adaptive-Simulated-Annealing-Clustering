@@ -349,7 +349,7 @@ def run_clustering_comparison(data, k, title_suffix, filename=None, max_iter_sa=
     plt.grid(True, linestyle='--', alpha=0.5)
     plt.tight_layout()
     if filename:
-        plt.savefig(f'SS/{filename}_graph.png', dpi=150, bbox_inches='tight')
+        plt.savefig(f'SS/{filename}_graph.jpg', dpi=150, bbox_inches='tight')
     plt.show()
     
     # --- PLOT 2: Side-by-Side Clusters (Only for 2D data) ---
@@ -364,7 +364,7 @@ def run_clustering_comparison(data, k, title_suffix, filename=None, max_iter_sa=
         plt.suptitle(f"Clustering Comparison: {title_suffix}", fontsize=16)
         plt.tight_layout()
         if filename:
-            plt.savefig(f'SS/{filename}_clustering.png', dpi=150, bbox_inches='tight')
+            plt.savefig(f'SS/{filename}_clustering.jpg', dpi=150, bbox_inches='tight')
         plt.show()
 
     print(f"--- {title_suffix} ---")
@@ -682,7 +682,7 @@ plt.xlabel("Iteration")
 plt.ylabel("Cross-Entropy Loss")
 plt.legend()
 plt.grid(True, alpha=0.3)
-plt.savefig('SS/Softmax_iris.png', dpi=150, bbox_inches='tight')
+plt.savefig('SS/Softmax_iris.jpg', dpi=150, bbox_inches='tight')
 plt.show()
 
 print(f"Final Loss (KMeans Random Init): {sa_loss_std:.4f}")
@@ -843,7 +843,7 @@ plt.xlabel("Iteration")
 plt.ylabel("Distortion (Cost)")
 plt.grid(True, linestyle='--', alpha=0.5)
 plt.tight_layout()
-plt.savefig('SS/sa_vs_kmeans_exploration_graph.png', dpi=150, bbox_inches='tight')
+plt.savefig('SS/sa_vs_kmeans_exploration_graph.jpg', dpi=150, bbox_inches='tight')
 plt.show()
 
 # ==========================
