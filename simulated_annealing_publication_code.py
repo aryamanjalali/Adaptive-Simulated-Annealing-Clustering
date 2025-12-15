@@ -855,3 +855,5 @@ print(f"SA Final Distortion:       {sa_dist:.2f}")
 print(f"SA found a {'BETTER' if sa_dist < kmeans_dist else 'WORSE'} solution.")
 
 
+
+
